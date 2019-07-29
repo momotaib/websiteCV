@@ -1,0 +1,129 @@
+/* background, margin and padding set for the body of the page  */
+body {
+  background: url("../Images/grey.jpeg");
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+/*displaying flex for the nav bar and grows from mobile to desktop  */
+nav {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  border: 4px solid black;
+  border-radius: 7px;
+}
+
+nav a {
+  padding: .500em .500em;
+  transition: 0.5s;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* hover effect and decoration for user */
+nav a:hover {
+  color: #1E90FF;
+  text-decoration: underline;
+
+}
+
+/* height, width and position set for image on mobile  */
+img {
+  height: 400px;
+  width: 250px;
+  float: left;
+  padding: 5px;
+  padding-right: 15px;
+  border-radius: 10px;
+
+}
+
+/* quote image unavailable for mobile  */
+#quote {
+  display: none;
+
+}
+
+/* styles for ul and p tag */
+ul {
+  list-style-type: square;
+  font-size: 15px;
+}
+
+p {
+  font-weight:bold;
+  color: black;
+  font-size: 15px;
+}
+
+/* position for h1 and font size and weight  */
+h1 {
+  position: relative;
+  top: 5%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* dimensions for video tags  */
+video {
+  height: 500px;
+  width: 100%;
+}
+
+/* setting font size,color and type for h2,h3 and h4 */
+h2, h3, h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  color: #000080;
+}
+/* DESKTOP STYLES */
+@media screen and (min-width: 1000px) {
+
+  /* height, width and position set for image on desktop  */
+  img {
+    height: 400px;
+    width: 70%;
+    float: left;
+    padding: 5px;
+    padding-right: 30px;
+    border-radius: 10px;
+  }
+
+  /* quote image to be available on desktop  */
+  #quote {
+    display: inherit;
+  }
+
+  /* me image to be unavailable on desktop  */
+  #me {
+    display: none;
+  }
+
+  /* positioning for all three spans set on desktop  */
+  #dubai {
+    padding-top: 18px;
+    float: left;
+    height: 500px;
+    width: 33%;
+  }
+  #milan {
+    float:left;
+    height: 500px;
+    padding-top: 12px;
+    padding-left: 6px;
+    width: 33%;
+  }
+  #barcelona {
+    float: right;
+    height: 500px;
+    width: 33%;
+  }
+
+}

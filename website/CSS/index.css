@@ -1,0 +1,114 @@
+/* googleapis fonts imported for header  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+@keyframes sp {
+  0%, 100% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 40%;
+  }
+}
+/* @keyframes identifier for the pulse effect on the enter button with the use of rgba to transform the background behind h1 */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+/* position of background on the webpage with link to image */
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background: url(https://images.unsplash.com/photo-1530570094090-deefc82ab21c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=fdbb180649d7742e5b58cc8a7c9b6288);
+  background-size: 160% 160%;
+  overflow: hidden;
+  animation: sp 40s linear infinite;
+}
+/* position of header with set font and and text shadow used for effect */
+.wrapper h1 {
+  margin: 0;
+  line-height: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  background: white;
+  mix-blend-mode: lighten;
+  text-shadow: 0px 0px 0px, 0px 0px black;
+  letter-spacing: 1vw;
+  width: 100%;
+}
+
+/* enter class for the whole button and position of it on the screen*/
+.enter {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0 auto 0;
+}
+
+/*span id for enter button with the position of the button and all font details with red,green, blue, alpha for the pulse animation effect  */
+#enter-button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #464646;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(25, 25, 25, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+#enter-button:hover {
+  animation: none;
+}
+/* DESKTOP STYLES */
+@media screen and (min-width: 1000px) {
+
+  /* wrapper set for desktop along with h1 sizes adjusted to compliment the sizeing */
+  .wrapper {
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: url(https://images.unsplash.com/photo-1530570094090-deefc82ab21c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=fdbb180649d7742e5b58cc8a7c9b6288);
+    background-size: 160% 160%;
+    overflow: hidden;
+    animation: sp 40s linear infinite;
+  }
+  .wrapper h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    line-height: 100vh;
+    font-size: 85px;
+    background: white;
+    mix-blend-mode: lighten;
+    text-shadow: 0px 0px 0px, 0px 0px black;
+    letter-spacing: 1vw;
+    width: 100%;
+  }
+}
